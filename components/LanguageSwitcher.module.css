@@ -1,0 +1,14 @@
+.switcher {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.option {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid transparent;
+}
+
+.active {
+  border-color: #000;
+}

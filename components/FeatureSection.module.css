@@ -1,0 +1,11 @@
+.section {
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: 1rem;
+  background-color: #fff;
+}
+
+.item {
+  border: 1px dashed #d0d0d0;
+  padding: 1rem;
+}

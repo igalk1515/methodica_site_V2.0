@@ -1,0 +1,16 @@
+{
+  "title": "Placeholder Title",
+  "subtitle": "Placeholder subtitle text",
+  "cta": "Primary Action",
+  "features": [
+    "Feature placeholder one",
+    "Feature placeholder two",
+    "Feature placeholder three"
+  ],
+  "footer": "Footer placeholder text",
+  "navLinks": [
+    "Overview",
+    "Highlights",
+    "Contact"
+  ]
+}
