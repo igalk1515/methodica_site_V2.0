@@ -1,6 +1,6 @@
 'use client';
 
-import styles from "./FeatureSection.module.css";
+import styles from './FeatureSection.module.css';
 
 export default function FeatureSection({ items = [] }) {
   return (

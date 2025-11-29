@@ -1,16 +1,128 @@
 {
-  "title": "Placeholder Title",
-  "subtitle": "Placeholder subtitle text",
-  "cta": "Primary Action",
-  "features": [
-    "Feature placeholder one",
-    "Feature placeholder two",
-    "Feature placeholder three"
+  "title": "Methodica AI",
+  "navLinks": ["Sales Agent", "Customer Service Agent", "Custom Agent"],
+  "navServices": "Our Services",
+  "navBlog": "Blog",
+  "navAbout": "About",
+  "navContact": "Contact",
+  "navBlogHref": "#products",
+  "navAboutHref": "#contact",
+  "navDropdown": [
+    { "label": "Sales Agent", "href": "#product-sales" },
+    { "label": "Customer Support Agent", "href": "#product-support" },
+    { "label": "Custom AI Agent", "href": "#product-custom" }
   ],
-  "footer": "Footer placeholder text",
-  "navLinks": [
-    "Overview",
-    "Highlights",
-    "Contact"
-  ]
+  "home": {
+    "hero": {
+      "titlePrefix": "Build",
+      "titleHighlight": "AI Agents",
+      "titleSuffix": "that transform your business",
+      "description": "Accelerate growth and cut costs with smart AI agents working 24/7 for your success.",
+      "inputPlaceholder": "Enter phone number",
+      "primaryCta": "Try now"
+    },
+    "partners": {
+      "tagline": "One Methodica, countless partners in success"
+    },
+    "products": {
+      "heading": "Our Products",
+      "cards": [
+        {
+          "id": "product-sales",
+          "icon": "smart_ai_icon.png",
+          "title": "Sales AI Agent",
+          "subtitle": "Intelligent sales automation",
+          "description": "An AI agent that calls leads, qualifies prospects, and closes deals around the clock.",
+          "linkLabel": "Learn more",
+          "linkHref": "#"
+        },
+        {
+          "id": "product-support",
+          "icon": "chatbot_icon.png",
+          "title": "Customer Support Agent",
+          "subtitle": "Instant, multi-channel care",
+          "description": "Serve customers over WhatsApp, chat, email, and phone with full context memory.",
+          "linkLabel": "Learn more",
+          "linkHref": "#"
+        },
+        {
+          "id": "product-custom",
+          "icon": "idea_icon.png",
+          "title": "Custom AI Agent",
+          "subtitle": "Tailored to your business",
+          "description": "Design a bespoke AI agent around your processes, internal knowledge, and goals.",
+          "linkLabel": "Learn more",
+          "linkHref": "#"
+        }
+      ]
+    },
+    "aiBanner": {
+      "ready": "Ready for the future of intelligence?",
+      "titlePrefix": "See how Methodica's",
+      "titleHighlight": "AI agents",
+      "titleSuffix": "can work for you",
+      "ctaLabel": "Let's get started"
+    },
+    "contact": {
+      "heading": "We'd love to hear from you",
+      "lead": "Methodica — smart agents, faster growth.",
+      "promise": "Free consultation within 24 hours",
+      "guarantee": "Secure AI. Guaranteed outcomes.",
+      "customCta": {
+        "label": "Need a tailored scoping?",
+        "highlight": "Click here"
+      },
+      "form": {
+        "nameLabel": "Full name",
+        "namePlaceholder": "Alex Cohen",
+        "phoneLabel": "Phone",
+        "phonePlaceholder": "+1 (555) 123-4567",
+        "emailLabel": "Email",
+        "emailPlaceholder": "alex@business.com",
+        "interestLabel": "Solution of interest",
+        "interestPlaceholder": "Choose...",
+        "interestOptions": ["Sales Agent", "Customer Support", "Custom Agent"],
+        "messagePlaceholder": "Tell us about your challenge (optional)",
+        "consentLabel": "I agree to receive updates",
+        "submitLabel": "Send request"
+      }
+    }
+  },
+  "footer": {
+    "followTitle": "Follow us",
+    "paragraphs": [
+      "Join our community and see how secure AI agents accelerate business growth.",
+      "We specialise in building and securing advanced AI agents."
+    ],
+    "solutionsTitle": "AI Solutions",
+    "solutions": [
+      { "label": "Sales AI Agent", "href": "#" },
+      { "label": "Customer Support Agent", "href": "#" },
+      { "label": "Custom AI Agent", "href": "#" }
+    ],
+    "resourcesTitle": "Resources",
+    "resources": [
+      { "label": "Blog & Articles", "href": "#" },
+      { "label": "FAQ", "href": "#" }
+    ],
+    "aboutTitle": "About",
+    "about": [
+      { "label": "About Methodica", "href": "#" },
+      { "label": "Expert Team", "href": "#" },
+      { "label": "Portfolio", "href": "#" },
+      { "label": "Careers", "href": "#" }
+    ],
+    "socialLinks": [
+      { "label": "Facebook", "short": "F", "href": "#" },
+      { "label": "Instagram", "short": "IG", "href": "#" },
+      { "label": "YouTube", "short": "YT", "href": "#" },
+      { "label": "LinkedIn", "short": "IN", "href": "#" }
+    ],
+    "rights": "All Rights Reserved to Methodica AI 2025",
+    "policies": [
+      { "label": "Accessibility", "href": "#" },
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Use", "href": "#" }
+    ]
+  }
 }

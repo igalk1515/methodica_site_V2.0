@@ -1,22 +1,11 @@
-import nextDynamic from "next/dynamic";
-import Hero from "../../components/Hero";
-import { getDictionary } from "../i18n";
+import HomeContent from '../../components/HomeContent';
+import { getDictionary } from '../i18n';
 
-const FeatureSection = nextDynamic(() => import("../../components/FeatureSection"));
-
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 export default function LocaleHomePage({ params }) {
-  const dictionary = getDictionary(params.locale);
+  const { locale } = params;
+  const dictionary = getDictionary(locale);
 
-  return (
-    <>
-      <Hero
-        title={dictionary.title}
-        subtitle={dictionary.subtitle}
-        ctaLabel={dictionary.cta}
-      />
-      <FeatureSection items={dictionary.features} />
-    </>
-  );
+  return <HomeContent dictionary={dictionary} locale={locale} />;
 }

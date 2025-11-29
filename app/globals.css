@@ -1,5 +1,12 @@
 :root {
   color-scheme: light;
+  --brand-purple1: #713b7e;
+  --brand-purple2: #7e2574;
+  --brand-purple3: #b84f9d;
+  --brand-purple4: #952f73;
+  --brand-purple5: #842990;
+  --text-black: #000000;
+  --bg-light: #ffffff;
 }
 
 * {
@@ -10,13 +17,26 @@
 
 body {
   min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #f8f8f8;
-  color: #111;
+  background-color: var(--bg-light);
+  color: var(--text-black);
+  line-height: 1.6;
 }
 
-body[dir="rtl"] {
+body.light {
+  background-color: var(--bg-light);
+}
+
+body[dir='rtl'] {
   direction: rtl;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  display: block;
 }
 
 a {

@@ -1,16 +1,128 @@
 {
-  "title": "כותרת לדוגמה",
-  "subtitle": "טקסט משנה לדוגמה",
-  "cta": "קריאה לפעולה",
-  "features": [
-    "מאפיין מדגים ראשון",
-    "מאפיין מדגים שני",
-    "מאפיין מדגים שלישי"
+  "title": "Methodica AI",
+  "navLinks": ["סוכן מכירות", "סוכן שירות לקוחות", "סוכן בהתאמה אישית"],
+  "navServices": "השירותים שלנו",
+  "navBlog": "בלוג",
+  "navAbout": "אודות",
+  "navContact": "יצירת קשר",
+  "navBlogHref": "#products",
+  "navAboutHref": "#contact",
+  "navDropdown": [
+    { "label": "סוכן מכירות", "href": "#product-sales" },
+    { "label": "סוכן שירות לקוחות", "href": "#product-support" },
+    { "label": "סוכן בהתאמה אישית", "href": "#product-custom" }
   ],
-  "footer": "טקסט כותרת תחתונה לדוגמה",
-  "navLinks": [
-    "סקירה",
-    "נקודות עיקריות",
-    "צור קשר"
-  ]
+  "home": {
+    "hero": {
+      "titlePrefix": "בנו סוכני",
+      "titleHighlight": "בינה מלאכותית",
+      "titleSuffix": "שישנו את העסק שלכם",
+      "description": "מאיצים צמיחה וחוסכים בעלויות עם סוכני AI חכמים הפועלים 24/7 למען ההצלחה שלך",
+      "inputPlaceholder": "הכניסו מספר טלפון",
+      "primaryCta": "נסו עכשיו"
+    },
+    "partners": {
+      "tagline": "מתודיקה אחת, עם אינספור שותפים להצלחה"
+    },
+    "products": {
+      "heading": "המוצרים שלנו",
+      "cards": [
+        {
+          "id": "product-sales",
+          "icon": "smart_ai_icon.png",
+          "title": "סוכן מכירות AI",
+          "subtitle": "אוטומציה חכמה למכירות",
+          "description": "סוכן AI שמבצע שיחות, מזהה לידים ומבצע סגירות אוטומטיות 24/7",
+          "linkLabel": "למידע נוסף",
+          "linkHref": "#"
+        },
+        {
+          "id": "product-support",
+          "icon": "chatbot_icon.png",
+          "title": "סוכן שירות לקוחות",
+          "subtitle": "תמיכה מיידית ורב-ערוצית",
+          "description": "מענה בוואטסאפ, צ'אט, דוא\"ל וטלפון – עם זיכרון הקשר מלא",
+          "linkLabel": "למידע נוסף",
+          "linkHref": "#"
+        },
+        {
+          "id": "product-custom",
+          "icon": "idea_icon.png",
+          "title": "סוכן בהתאמה אישית",
+          "subtitle": "פתרון מותאם לעסק שלך",
+          "description": "בניית סוכן AI ייעודי לפי תהליכים, ידע פנימי ומטרות העסק",
+          "linkLabel": "למידע נוסף",
+          "linkHref": "#"
+        }
+      ]
+    },
+    "aiBanner": {
+      "ready": "מוכנים לעתיד של אינטליגנציה מלאכותית?",
+      "titlePrefix": "גלו איך סוכני ה-AI של",
+      "titleHighlight": "מתודיקה",
+      "titleSuffix": "יכולים לעבוד בשבילכם",
+      "ctaLabel": "קדימה, בואו נתחיל"
+    },
+    "contact": {
+      "heading": "נשמח לשמוע ממך",
+      "lead": "מתודיקה — סוכנים חכמים, צמיחה מהירה.",
+      "promise": "ייעוץ חינם תוך 24 שעות",
+      "guarantee": "AI מאובטח. תוצאות מובטחות.",
+      "customCta": {
+        "label": "לאפיון והתאמה עבורך",
+        "highlight": "לחץ כאן"
+      },
+      "form": {
+        "nameLabel": "שם מלא",
+        "namePlaceholder": "יוסי כהן",
+        "phoneLabel": "טלפון",
+        "phonePlaceholder": "05X-XXXXXXX",
+        "emailLabel": "אימייל",
+        "emailPlaceholder": "yossi@business.co.il",
+        "interestLabel": "פתרון מבוקש",
+        "interestPlaceholder": "בחרו...",
+        "interestOptions": ["סוכן מכירות", "שירות לקוחות", "סוכן מותאם אישית"],
+        "messagePlaceholder": "מה האתגר שלכם? (אופציונלי)",
+        "consentLabel": "מאשר קבלת עדכונים",
+        "submitLabel": "שגר בקשה"
+      }
+    }
+  },
+  "footer": {
+    "followTitle": "עקבו אחרינו",
+    "paragraphs": [
+      "הצטרפו לקהילה שלנו וגלו איך סוכני AI מאובטחים מניעים צמיחה עסקית.",
+      "אנחנו המומחים לפיתוח ואבטחת סוכני AI מתקדמים."
+    ],
+    "solutionsTitle": "פתרונות AI",
+    "solutions": [
+      { "label": "סוכן מכירות AI", "href": "#" },
+      { "label": "סוכן שירות לקוחות AI", "href": "#" },
+      { "label": "סוכן AI בהתאמה אישית", "href": "#" }
+    ],
+    "resourcesTitle": "תכנים",
+    "resources": [
+      { "label": "בלוג ומאמרים", "href": "#" },
+      { "label": "שאלות נפוצות", "href": "#" }
+    ],
+    "aboutTitle": "עלינו",
+    "about": [
+      { "label": "אודות מתודיקה", "href": "#" },
+      { "label": "צוות המומחים", "href": "#" },
+      { "label": "פורטפוליו", "href": "#" },
+      { "label": "הזדמנויות קריירה", "href": "#" }
+    ],
+    "socialLinks": [
+      { "label": "Facebook", "short": "F", "href": "#" },
+      { "label": "Instagram", "short": "IG", "href": "#" },
+      { "label": "YouTube", "short": "YT", "href": "#" },
+      { "label": "LinkedIn", "short": "IN", "href": "#" }
+    ],
+    "rights": "All Rights Reserved to Methodica AI 2025",
+    "policies": [
+      { "label": "הסדרי נגישות", "href": "#" },
+      { "label": "מדיניות פרטיות", "href": "#" },
+      { "label": "תנאי שימוש", "href": "#" }
+    ]
+  }
 }

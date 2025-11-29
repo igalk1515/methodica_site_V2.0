@@ -1,16 +1,25 @@
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import { getDictionary, locales } from "../i18n";
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import { getDictionary, locales } from '../i18n';
 
 export default function LocaleLayout({ children, params }) {
   const { locale } = params;
   const dictionary = getDictionary(locale);
-  const direction = locale === "he" ? "rtl" : "ltr";
+  const direction = locale === 'he' ? 'rtl' : 'ltr';
 
-  const links = (dictionary.navLinks || []).map((label, index) => ({
-    label,
-    href: `/${locale}#section-${index + 1}`
-  }));
+  const dropdownSource = Array.isArray(dictionary.navDropdown)
+    ? dictionary.navDropdown
+    : dictionary.navLinks || [];
+
+  const links = dropdownSource.map((item, index) => {
+    const label = typeof item === 'string' ? item : item.label;
+    const href =
+      typeof item === 'string'
+        ? `/${locale}#section-${index + 1}`
+        : item.href || `/${locale}#section-${index + 1}`;
+
+    return { label, href };
+  });
 
   return (
     <div lang={locale} dir={direction}>
@@ -19,9 +28,10 @@ export default function LocaleLayout({ children, params }) {
         brandLabel={dictionary.title}
         links={links}
         localesList={locales}
+        dictionary={dictionary}
       />
       <main>{children}</main>
-      <Footer text={dictionary.footer} locale={locale} />
+      <Footer dictionary={dictionary} locale={locale} />
     </div>
   );
 }
