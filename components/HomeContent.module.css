@@ -176,14 +176,8 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2.5rem;
-}
-
-@media (min-width: 768px) {
-  .productsHeadingRow {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+  text-align: inherit;
+  align-items: flex-start;
 }
 
 .productsTitle {
@@ -229,57 +223,60 @@
 
 .productGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .productGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .productCard {
   position: relative;
+  overflow: hidden;
   padding: 2rem;
   border-radius: 1.25rem;
   background: transparent;
   box-shadow: none;
   transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  max-width: 22.5rem;
+  margin: 0 auto;
+  text-align: inherit;
 }
 
 .productCard::before {
   content: '';
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: #ffffff;
-  box-shadow: none;
-  z-index: -2;
-  transition: box-shadow 0.3s ease;
-}
-
-.productCard::after {
-  content: '';
-  position: absolute;
+  right: 0;
   top: 0;
   bottom: 0;
-  right: 0;
-  width: 0.25rem;
-  border-radius: 0 1.25rem 1.25rem 0;
+  width: 3px;
   background: linear-gradient(
-    180deg,
+    to bottom,
     var(--brand-purple2),
     var(--brand-purple3)
   );
+  border-radius: 0 1.25rem 1.25rem 0;
   transition: width 0.3s ease;
-  z-index: -1;
 }
 
 .productCard:hover {
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transform: translateY(-4px);
 }
 
 .productCard:hover::before {
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
-}
-
-.productCard:hover::after {
-  width: 0.35rem;
+  width: 5px;
 }
 
 .productIconWrapper {
@@ -646,6 +643,29 @@
 .rtl .productDescription,
 .rtl .contactLead,
 .rtl .contactPromise {
+  text-align: right;
+}
+
+.rtl .productsHeadingRow {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.rtl .productsCta {
+  align-self: flex-end;
+}
+
+.rtl .productCard {
+  text-align: right;
+}
+
+.rtl .productCard::before {
+  right: auto;
+  left: 0;
+  border-radius: 1.25rem 0 0 1.25rem;
+}
+
+.rtl .productCard {
   text-align: right;
 }
 
