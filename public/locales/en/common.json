@@ -6,7 +6,7 @@
   "navAbout": "About",
   "navContact": "Contact",
   "navBlogHref": "#products",
-  "navAboutHref": "#contact",
+  "navAboutHref": "/en/about",
   "navDropdown": [
     { "label": "Sales Agent", "href": "#product-sales" },
     { "label": "Customer Support Agent", "href": "#product-support" },

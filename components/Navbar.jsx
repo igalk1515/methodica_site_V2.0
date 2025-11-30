@@ -74,6 +74,7 @@ export default function Navbar({
   );
   const blogHref = dictionary.navBlogHref || fallback.navBlogHref;
   const aboutHref = dictionary.navAboutHref || fallback.navAboutHref;
+  const contactHref = `/${locale}#contact`;
   const headerClassName = isScrolled
     ? `${styles.header} ${styles.scrolled}`
     : styles.header;
@@ -145,7 +146,7 @@ export default function Navbar({
               <LanguageSwitcher currentLocale={locale} locales={localesList} />
             </div>
           )}
-          <Link href="#contact" className={styles.contactButton}>
+          <Link href={contactHref} className={styles.contactButton}>
             {contactLabel}
           </Link>
         </div>

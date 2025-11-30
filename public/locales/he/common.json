@@ -6,7 +6,7 @@
   "navAbout": "אודות",
   "navContact": "יצירת קשר",
   "navBlogHref": "#products",
-  "navAboutHref": "#contact",
+  "navAboutHref": "/he/about",
   "navDropdown": [
     { "label": "סוכן מכירות", "href": "#product-sales" },
     { "label": "סוכן שירות לקוחות", "href": "#product-support" },
