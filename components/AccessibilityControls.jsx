@@ -2,29 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const TEXT_SCALE_OPTIONS = [
-  {
-    id: 'standard',
-    labels: {
-      en: { label: 'Default', description: 'Standard text size' },
-      he: { label: 'ברירת מחדל', description: 'גודל טקסט רגיל' },
-    },
-  },
-  {
-    id: 'large',
-    labels: {
-      en: { label: 'Large', description: 'Increase text by 12%' },
-      he: { label: 'גדול', description: 'הגדלה של כ-12%' },
-    },
-  },
-  {
-    id: 'xlarge',
-    labels: {
-      en: { label: 'Extra large', description: 'Increase text by 20%' },
-      he: { label: 'ענק', description: 'הגדלה של כ-20%' },
-    },
-  },
-];
+const DEFAULT_TEXT_SCALE = 1;
+const MIN_TEXT_SCALE = 0.8;
+const MAX_TEXT_SCALE = 1.4;
+const TEXT_SCALE_STEP = 0.05;
 
 const CONTRAST_OPTIONS = [
   {
@@ -49,6 +30,8 @@ const CONTRAST_OPTIONS = [
   },
 ];
 
+const CONTRAST_OPTION_IDS = CONTRAST_OPTIONS.map((option) => option.id);
+
 const LABELS = {
   en: {
     fabLabel: 'Accessibility options',
@@ -59,6 +42,7 @@ const LABELS = {
     decreaseText: 'Decrease text size',
     increaseText: 'Increase text size',
     textSizeStatus: 'Current text size',
+    textSizeHint: 'Adjust in 5% steps',
   },
   he: {
     fabLabel: 'אפשרויות נגישות',
@@ -69,6 +53,7 @@ const LABELS = {
     decreaseText: 'הקטנת גודל הטקסט',
     increaseText: 'הגדלת גודל הטקסט',
     textSizeStatus: 'גודל הטקסט הנוכחי',
+    textSizeHint: 'כוונון בקפיצות של 5%',
   },
 };
 
@@ -81,6 +66,46 @@ function getLocalizedLabels(locale) {
   return LABELS.en;
 }
 
+function roundToStep(value) {
+  return Number(
+    (Math.round(value / TEXT_SCALE_STEP) * TEXT_SCALE_STEP).toFixed(2)
+  );
+}
+
+function clampScale(value) {
+  const clamped = Math.min(MAX_TEXT_SCALE, Math.max(MIN_TEXT_SCALE, value));
+  return roundToStep(clamped);
+}
+
+function normalizeStoredScale(value) {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return clampScale(value);
+  }
+
+  if (typeof value === 'string') {
+    const numeric = Number(value);
+    if (!Number.isNaN(numeric)) {
+      return clampScale(numeric);
+    }
+    switch (value) {
+      case 'standard':
+        return DEFAULT_TEXT_SCALE;
+      case 'large':
+        return clampScale(DEFAULT_TEXT_SCALE + TEXT_SCALE_STEP * 2);
+      case 'xlarge':
+        return clampScale(DEFAULT_TEXT_SCALE + TEXT_SCALE_STEP * 4);
+      default:
+        break;
+    }
+  }
+
+  return DEFAULT_TEXT_SCALE;
+}
+
+function formatScale(scale) {
+  return `${Math.round(scale * 100)}%`;
+}
+
 function applyPreferences(textScale, contrastMode) {
   if (typeof document === 'undefined') {
     return;
@@ -88,8 +113,10 @@ function applyPreferences(textScale, contrastMode) {
 
   const root = document.documentElement;
 
-  root.dataset.textScale = textScale;
+  const textScaleValue = textScale.toFixed(2);
+  root.dataset.textScale = textScaleValue;
   root.dataset.contrast = contrastMode;
+  root.style.setProperty('--text-scale', textScaleValue);
 }
 
 function loadPreferences() {
@@ -102,15 +129,19 @@ function loadPreferences() {
       return null;
     }
     const parsed = JSON.parse(raw);
-    if (
-      parsed &&
-      typeof parsed === 'object' &&
-      typeof parsed.textScale === 'string' &&
-      typeof parsed.contrastMode === 'string'
-    ) {
+    if (parsed && typeof parsed === 'object') {
+      const textScaleValue = normalizeStoredScale(parsed.textScale);
+      const contrastCandidate =
+        typeof parsed.contrastMode === 'string'
+          ? parsed.contrastMode
+          : CONTRAST_OPTIONS[0].id;
+      const contrastValue = CONTRAST_OPTION_IDS.includes(contrastCandidate)
+        ? contrastCandidate
+        : CONTRAST_OPTIONS[0].id;
+
       return {
-        textScale: parsed.textScale,
-        contrastMode: parsed.contrastMode,
+        textScale: textScaleValue,
+        contrastMode: contrastValue,
       };
     }
   } catch (error) {
@@ -124,7 +155,10 @@ function storePreferences(textScale, contrastMode) {
     return;
   }
   try {
-    const payload = JSON.stringify({ textScale, contrastMode });
+    const payload = JSON.stringify({
+      textScale: Number(textScale.toFixed(2)),
+      contrastMode,
+    });
     window.localStorage.setItem(STORAGE_KEY, payload);
   } catch (error) {
     console.warn('Failed to store accessibility preferences', error);
@@ -144,19 +178,18 @@ function resolveOptionCopy(option, locale) {
 export default function AccessibilityControls({ locale = 'en' }) {
   const labels = getLocalizedLabels(locale);
   const [isOpen, setIsOpen] = useState(false);
-  const [textScale, setTextScale] = useState(TEXT_SCALE_OPTIONS[0].id);
+  const [textScale, setTextScale] = useState(DEFAULT_TEXT_SCALE);
   const [contrastMode, setContrastMode] = useState(CONTRAST_OPTIONS[0].id);
   const panelRef = useRef(null);
   const triggerRef = useRef(null);
   const panelId = 'accessibility-controls-panel';
-  const currentScaleIndex = TEXT_SCALE_OPTIONS.findIndex(
-    (option) => option.id === textScale
-  );
-  const currentScaleOption =
-    TEXT_SCALE_OPTIONS[currentScaleIndex] || TEXT_SCALE_OPTIONS[0];
-  const currentScaleCopy = resolveOptionCopy(currentScaleOption, locale);
-  const hasSmallerScale = currentScaleIndex > 0;
-  const hasLargerScale = currentScaleIndex < TEXT_SCALE_OPTIONS.length - 1;
+  const hasSmallerScale = textScale > MIN_TEXT_SCALE + TEXT_SCALE_STEP / 2;
+  const hasLargerScale = textScale < MAX_TEXT_SCALE - TEXT_SCALE_STEP / 2;
+  const formattedScale = formatScale(textScale);
+  const minScalePercent = Math.round(MIN_TEXT_SCALE * 100);
+  const maxScalePercent = Math.round(MAX_TEXT_SCALE * 100);
+  const currentScalePercent = Math.round(textScale * 100);
+  const textSizeHint = `${labels.textSizeHint} (${minScalePercent}% - ${maxScalePercent}%)`;
 
   useEffect(() => {
     const stored = loadPreferences();
@@ -218,20 +251,17 @@ export default function AccessibilityControls({ locale = 'en' }) {
   };
 
   const changeTextScale = (direction) => {
-    if (direction === 0) {
+    if (!direction) {
       return;
     }
-    let nextIndex = currentScaleIndex + direction;
-    if (nextIndex < 0) {
-      nextIndex = 0;
-    }
-    if (nextIndex > TEXT_SCALE_OPTIONS.length - 1) {
-      nextIndex = TEXT_SCALE_OPTIONS.length - 1;
-    }
-    const nextOption = TEXT_SCALE_OPTIONS[nextIndex];
-    if (nextOption) {
-      setTextScale(nextOption.id);
-    }
+
+    setTextScale((previous) => {
+      const nextValue = clampScale(previous + direction * TEXT_SCALE_STEP);
+      if (Math.abs(nextValue - previous) < TEXT_SCALE_STEP / 2) {
+        return previous;
+      }
+      return nextValue;
+    });
   };
 
   const selectContrast = (value) => {
@@ -291,9 +321,18 @@ export default function AccessibilityControls({ locale = 'en' }) {
         </div>
 
         <div className="accessibilitySections">
-          <section className="accessibilitySection" aria-label={labels.textSizeTitle}>
-            <h3 className="accessibilitySectionTitle">{labels.textSizeTitle}</h3>
-            <div className="accessibilityStepper" role="group" aria-label={labels.textSizeTitle}>
+          <section
+            className="accessibilitySection"
+            aria-label={labels.textSizeTitle}
+          >
+            <h3 className="accessibilitySectionTitle">
+              {labels.textSizeTitle}
+            </h3>
+            <div
+              className="accessibilityStepper"
+              role="group"
+              aria-label={labels.textSizeTitle}
+            >
               <button
                 type="button"
                 className="accessibilityStepperButton"
@@ -303,12 +342,19 @@ export default function AccessibilityControls({ locale = 'en' }) {
               >
                 <span aria-hidden="true">−</span>
               </button>
-              <div className="accessibilityStepperValue" aria-live="polite">
+              <div
+                className="accessibilityStepperValue"
+                role="status"
+                aria-live="polite"
+                aria-atomic="true"
+                aria-label={`${labels.textSizeStatus}: ${formattedScale}`}
+                data-scale-percent={currentScalePercent}
+              >
                 <span className="accessibilityStepperLabel">
-                  {labels.textSizeStatus}: {currentScaleCopy.label}
+                  {labels.textSizeStatus}: {formattedScale}
                 </span>
                 <span className="accessibilityStepperDescription">
-                  {currentScaleCopy.description}
+                  {textSizeHint}
                 </span>
               </div>
               <button
@@ -323,8 +369,13 @@ export default function AccessibilityControls({ locale = 'en' }) {
             </div>
           </section>
 
-          <section className="accessibilitySection" aria-label={labels.contrastTitle}>
-            <h3 className="accessibilitySectionTitle">{labels.contrastTitle}</h3>
+          <section
+            className="accessibilitySection"
+            aria-label={labels.contrastTitle}
+          >
+            <h3 className="accessibilitySectionTitle">
+              {labels.contrastTitle}
+            </h3>
             <div className="accessibilityOptionGroup">
               {CONTRAST_OPTIONS.map((option) => {
                 const copy = resolveOptionCopy(option, locale);
@@ -336,7 +387,9 @@ export default function AccessibilityControls({ locale = 'en' }) {
                     onClick={() => selectContrast(option.id)}
                     aria-pressed={contrastMode === option.id}
                   >
-                    <span className="accessibilityOptionLabel">{copy.label}</span>
+                    <span className="accessibilityOptionLabel">
+                      {copy.label}
+                    </span>
                     <span className="accessibilityOptionDescription">
                       {copy.description}
                     </span>

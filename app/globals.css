@@ -11,6 +11,7 @@
   --text-secondary: #1f2937;
   --text-muted: #374151;
   --surface-elevated: #ffffff;
+  --text-scale: 1;
 }
 
 * {
@@ -19,24 +20,16 @@
   padding: 0;
 }
 
+html {
+  font-size: calc(var(--text-scale, 1) * 16px);
+}
+
 body {
   min-height: 100vh;
   background-color: var(--bg-light);
   color: var(--text-primary);
   line-height: 1.7;
-  font-size: 17px;
-}
-
-:root[data-text-scale='standard'] body {
-  font-size: 17px;
-}
-
-:root[data-text-scale='large'] body {
-  font-size: 19px;
-}
-
-:root[data-text-scale='xlarge'] body {
-  font-size: 20px;
+  font-size: 1.0625rem;
 }
 
 :root[data-contrast='high'] {
@@ -297,7 +290,11 @@ ul {
   height: 3.5rem;
   border-radius: 50%;
   border: none;
-  background: linear-gradient(135deg, var(--brand-purple2), var(--brand-purple3));
+  background: linear-gradient(
+    135deg,
+    var(--brand-purple2),
+    var(--brand-purple3)
+  );
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -315,7 +312,8 @@ ul {
 
 .accessibilityFab:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(113, 59, 126, 0.4), 0 18px 40px rgba(113, 59, 126, 0.35);
+  box-shadow: 0 0 0 3px rgba(113, 59, 126, 0.4),
+    0 18px 40px rgba(113, 59, 126, 0.35);
 }
 
 .accessibilityFabIcon {
@@ -427,7 +425,11 @@ ul {
 }
 
 .accessibilityOption[aria-pressed='true'] {
-  background: linear-gradient(135deg, var(--brand-purple2), var(--brand-purple3));
+  background: linear-gradient(
+    135deg,
+    var(--brand-purple2),
+    var(--brand-purple3)
+  );
   color: #ffffff;
   border-color: transparent;
   box-shadow: 0 14px 30px rgba(113, 59, 126, 0.35);
