@@ -34,17 +34,20 @@ export default function ContactForm({ contact, locale = 'he' }) {
     const payload = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch('/api/demo-contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          locale,
-          payload,
-          consent: formData.get('consent') === 'on',
-        }),
-      });
+      const response = await fetch(
+        'https://n8n.methodica.ai/webhook/website-new-client',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            locale,
+            payload,
+            consent: formData.get('consent') === 'on',
+          }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error('Failed to submit form');
