@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './HomeContent.module.css';
+import ContactForm from './ContactForm';
 import {
   ASSET_BASE,
   FALLBACK_HOME,
@@ -59,16 +60,17 @@ export default function HomeContent({ dictionary = {}, locale = 'he' }) {
             <span className={styles.heroTitleSegment}>{hero.titleSuffix}</span>
           </h1>
           <p className={styles.heroDescription}>{hero.description}</p>
-          <form className={styles.heroForm}>
-            <input
-              type="tel"
-              className={styles.heroInput}
-              placeholder={hero.inputPlaceholder}
-              aria-label={hero.inputPlaceholder}
-            />
-            <button type="submit" className={styles.heroButton}>
+          <form action={`https://wa.me/972552110416`}>
+            <a
+              href={`https://wa.me/972552110416?text=${encodeURIComponent(
+                'שלום, אשמח לקבוע יעוץ חינם'
+              )}`}
+              className={styles.heroButton}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {hero.primaryCta}
-            </button>
+            </a>
           </form>
         </div>
         <div className={styles.heroMedia}>
@@ -171,84 +173,7 @@ export default function HomeContent({ dictionary = {}, locale = 'he' }) {
             <p className={styles.contactPromise}>{contact.promise}</p>
             <div className={styles.contactGuarantee}>{contact.guarantee}</div>
           </aside>
-          <form className={styles.contactForm}>
-            <div className={styles.formGrid}>
-              <label className={styles.formField}>
-                <span className={styles.formLabel}>
-                  {contact.form.nameLabel}
-                </span>
-                <input
-                  type="text"
-                  name="full-name"
-                  placeholder={contact.form.namePlaceholder}
-                  className={styles.formInput}
-                  required
-                />
-              </label>
-              <label className={styles.formField}>
-                <span className={styles.formLabel}>
-                  {contact.form.phoneLabel}
-                </span>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder={contact.form.phonePlaceholder}
-                  className={styles.formInput}
-                  required
-                />
-              </label>
-              <label className={styles.formField}>
-                <span className={styles.formLabel}>
-                  {contact.form.emailLabel}
-                </span>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder={contact.form.emailPlaceholder}
-                  className={styles.formInput}
-                  required
-                />
-              </label>
-              <label className={`${styles.formField} ${styles.selectField}`}>
-                <span className={styles.formLabel}>
-                  {contact.form.interestLabel}
-                </span>
-                <div className={styles.selectWrapper}>
-                  <select
-                    name="interest"
-                    className={`${styles.formInput} ${styles.formSelect}`}
-                    required
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      {contact.form.interestPlaceholder}
-                    </option>
-                    {contact.form.interestOptions.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                  <span className={styles.selectIcon} aria-hidden="true" />
-                </div>
-              </label>
-              <label className={`${styles.formField} ${styles.fullWidth}`}>
-                <textarea
-                  name="needs"
-                  rows={3}
-                  placeholder={contact.form.messagePlaceholder}
-                  className={`${styles.formInput} ${styles.formTextArea}`}
-                />
-              </label>
-            </div>
-            <label className={styles.consentRow}>
-              <input type="checkbox" name="consent" required defaultChecked />
-              <span>{contact.form.consentLabel}</span>
-            </label>
-            <button type="submit" className={styles.submitButton}>
-              {contact.form.submitLabel}
-            </button>
-          </form>
+          <ContactForm contact={contact} locale={locale} />
         </div>
       </section>
     </div>

@@ -64,11 +64,8 @@
 }
 
 .heroForm {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  width: 100%;
-  max-width: 26rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 600px) {
@@ -612,6 +609,24 @@
 .submitButton:hover {
   transform: translateY(-1px);
   box-shadow: 0 12px 30px rgba(113, 59, 126, 0.25);
+}
+
+.formSuccess {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #065f46;
+  background: rgba(16, 185, 129, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.formError {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #b91c1c;
+  background: rgba(248, 113, 113, 0.15);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
 }
 
 @media (max-width: 640px) {
