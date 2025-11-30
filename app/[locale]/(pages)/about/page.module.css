@@ -100,11 +100,7 @@
 .highlightCard {
   border-radius: 1.75rem;
   padding: 2.5rem 2rem;
-  background: linear-gradient(
-    145deg,
-    rgba(10, 53, 103, 0.12),
-    rgba(113, 59, 126, 0.3)
-  );
+  background: linear-gradient(135deg, #0a3567, #713b7e);
   color: #ffffff;
   display: flex;
   flex-direction: column;
