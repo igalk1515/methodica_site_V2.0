@@ -1,5 +1,6 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import WhatsAppButton from '../../components/WhatsAppButton';
 import { getDictionary, locales } from '../i18n';
 
 export default function LocaleLayout({ children, params }) {
@@ -32,6 +33,7 @@ export default function LocaleLayout({ children, params }) {
       />
       <main>{children}</main>
       <Footer dictionary={dictionary} locale={locale} />
+      <WhatsAppButton />
     </div>
   );
 }
