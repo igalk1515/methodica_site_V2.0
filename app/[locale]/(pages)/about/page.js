@@ -5,7 +5,7 @@ const contentByLocale = {
   he: {
     heroTitle: 'אודות Methodica',
     heroLead:
-      'אנחנו Methodica AI, צוות של מומחי בינה מלאכותית ואוטומציות שמנגישים פתרונות חכמים לעסקים בכל גודל. המטרה שלנו פשוטה: להפוך טכנולוגיה מורכבת לכלי יומיומי שמייצר יותר הכנסות, חוסך משאבים ומשפר חוויית לקוח.',
+      'אנחנו Methodica AI – צוות של מומחי בינה מלאכותית ואוטומציות מתקדמות עם מטרה אחת ברורה: להפוך את הכוח של AI לזמין לכל עסק. אנחנו בונים סוכנים חכמים שמגדילים הכנסות, חוסכים זמן ומשאבים ומשדרגים כל חוויית לקוח.',
     stats: [
       { value: '300+', label: 'סוכני AI שכבר עובדים אצל לקוחותינו' },
       { value: '95%', label: 'שביעות רצון מפתרונות אוטומציה מותאמים' },
@@ -13,43 +13,43 @@ const contentByLocale = {
     ],
     storyTitle: 'הסיפור שלנו',
     storyParagraphs: [
-      'Methodica הוקמה בשנת 2025 על ידי ארבעה יזמים עם ניסיון מצטבר בעולמות הטכנולוגיה, הפיתוח העסקי והשירות. ראינו כיצד ארגונים גדולים נהנים מהיכולות של AI בעוד שעסקים קטנים ובינוניים נשארים מאחור בגלל חוסר בזמן, ידע או משאבים.',
-      'התוצאה היא פלטפורמה שמחברת בין טכנולוגיה מתקדמת להבנה עסקית עמוקה. אנחנו בונים סוכני AI ואוטומציות בתהליך מובנה שמתחיל באפיון צרכים אמיתי ומסתיים במדידה מתמשכת של תוצאות.',
+      'Methodica הוקמה בשנת 2025 על ידי ארבעת השותפים – אור, אביאל, דביר ויגאל – אחרי שנים של ניסיון מצטבר בעולמות הטכנולוגיה, השיווק והניהול העסקי.',
+      'ראינו מקרוב איך חברות גדולות נהנות מיכולות מתקדמות של AI בזמן שעסקים קטנים ובינוניים נשארים מאחור בגלל מחסור בזמן, ידע או תקציב.',
+      'החלטנו לאחד כוחות ולהקים פלטפורמה שמסוגלת לסגור את הפער הזה: סוכני AI מותאמים אישית שמנהלים תהליכים, מטפלים בלידים ומספקים תובנות עסקיות בזמן אמת.',
     ],
-    storyHighlight: { value: '4', label: 'שותפים שהקימו את Methodica AI' },
     howTitle: 'איך אנחנו עושים את זה?',
     howPoints: [
       'סוכני מכירות ושירות שפועלים 24/7, מנהלים שיחות, מסווגים לידים ומבצעים פולואפים חכמים.',
-      'אוטומציות עסקיות מותאמות אישית שמייעלות תהליכים וחוסכות בעלויות.',
-      'אינטגרציה מלאה לערוצים דיגיטליים כמו WhatsApp, אתרים, מייל ורשתות חברתיות.',
-      'למידה מתמשכת שמבטיחה שכל פתרון נשאר צעד אחד לפני השוק.',
+      'אוטומציות עסקיות מותאמות אישית שמייעלות תהליכים, חוסכות עלויות ומפנות משאבים לצמיחה.',
+      'אינטגרציות מלאות לערוצי WhatsApp, אתרים, מייל ורשתות חברתיות – כדי להיות זמינים בכל מקום.',
+      'למידה מתמשכת שמבטיחה שכל פתרון ממשיך להשתפר ונשאר צעד אחד לפני השוק.',
     ],
     missionTitle: 'למה אנחנו כאן',
     missionParagraphs: [
-      'אנחנו מאמינים ש-AI הוא לא פריבילגיה של תאגידים, אלא הזדמנות זמינה לכל בעל עסק שמעוניין לצמוח.',
-      'המוטו שלנו פשוט: לעבוד חכם יותר, לא קשה יותר. אם אתם רוצים עסק שמוכר יותר, משרת טוב יותר וחוסך משאבים – אנחנו כאן כדי שזה יקרה.',
+      'אנחנו מאמינים ש-AI הוא לא פריבילגיה של תאגידים אלא הזדמנות אמיתית לכל עסק שרוצה לגדול.',
+      'המוטו שלנו פשוט: לעבוד חכם יותר, לא קשה יותר. אם אתם רוצים למכור יותר, לשרת טוב יותר ולחסוך משאבים – אנחנו כאן כדי שזה יקרה.',
+      'השותפות שלנו מתחילה בהבנת הצורך העסקי ומסתיימת במדידה מדויקת של התוצאות.',
     ],
-    missionHighlight: { value: '2025', label: 'השנה שבה יצאנו לדרך' },
     valuesHeaderTitle: 'הערכים שלנו',
-    valuesHeaderLead: 'העקרונות שמנחים כל פתרון שאנחנו בונים',
+    valuesHeaderLead: 'העקרונות שמנחים את כל מה שאנחנו עושים',
     values: [
       {
         icon: '🎯',
         title: 'מונעים ממשימה',
         description:
-          'אנחנו כאן כדי לדמוקרטיזציה את תחום ה-AI ולהנגיש אוטומציה חכמה לעסקים מכל סדר גודל.',
+          'אנחנו מחויבים לדמוקרטיזציה של AI ולהנגשת אוטומציה חכמה לעסקים בכל סדר גודל.',
       },
       {
         icon: '💡',
-        title: 'חדשנות מתמדת',
+        title: 'חדשנות במוקד',
         description:
-          'צוות המחקר שלנו מחפש כל הזמן טכנולוגיות ושיטות חדשות שמחזירות ערך אמיתי ללקוחות.',
+          'אנחנו דוחפים את הגבולות של מה שאפשר עם AI ומחפשים כל הזמן טכנולוגיות ומתודולוגיות חדשות.',
       },
       {
         icon: '🏆',
         title: 'מצוינות באיכות',
         description:
-          'כל סוכן AI עובר בדיקות קפדניות ומכויל לביצועים יוצאי דופן ולמוכנות לשינוי.',
+          'כל סוכן AI שאנחנו בונים נבדק בקפידה ומכויל לביצועים יוצאי דופן ולזמינות לשינוי.',
       },
       {
         icon: '🤝',
@@ -65,7 +65,7 @@ const contentByLocale = {
         name: 'דביר',
         role: 'מנכ"ל ומייסד',
         description:
-          'יזם סדרתי ועו"ד שמוביל ארגונים להצלחה באמצעות אוטומציה.\nייסד שלוש חברות ומאות פרויקטים, והפך את הידע הזה לשליחות: לעזור לעסקים לעבוד חכם יותר ולחיות טוב יותר.',
+          'יזם סדרתי ועו"ד שמאמין שהצלחה אמיתית מתחילה ביעילות. ייסד וניהל שלוש חברות מצליחות עם עשרות עובדים בתחומי שיווק, פיתוח תוכנה וסטארט-אפים, והוביל מאות פרויקטים מא׳ ועד ת׳. אחרי שנים של ניהול אינטנסיבי גילה את הכוח המהפכני של אוטומציות ו-AI והפך את זה לשליחות: לעזור לעסקים לעצור את המירוץ, לעבוד חכם יותר ולחיות טוב יותר.',
         quote:
           'ההצלחה שלנו היא ההצלחה של הלקוחות שלנו. אם הם מצליחים – סימן שאנחנו עושים את זה נכון.',
       },
@@ -73,83 +73,87 @@ const contentByLocale = {
         name: 'אור',
         role: 'מנכ"ל כספים וצמיחה',
         description:
-          'כלכלן וחוקר נתונים שמוביל אפיון אישי של סוכני AI ותהליכים אוטומטיים.\nמתמחה בבניית מודלים עסקיים יעילים שמפנים זמן לצמיחה אמיתית.',
+          'כלכלן (תואר שני) ואיש מחקר עם זיקה עמוקה לנתונים, פיננסים וייעול תהליכים. ניהל משרד לייעוץ משכנתאות ושם פיתח מודלים שמבוססים על AI כדי להפוך מכירות למדויקות, יעילות ונמדדות. היום הוא מוביל את תחום האפיון וההתאמה האישית של סוכני AI ומודלים עסקיים, עם התמחות בבניית תהליכים חכמים וניתוח נתונים לאופטימיזציה מתמשכת.',
         quote:
-          'סוכן AI טוב משנה חיים – הוא מייעל את העסק, ממקד בצמיחה ומשדרג את השירות ללקוחות.',
+          'סוכן AI טוב משנה חיים – מייעל את העסק, ממקד בצמיחה ומשדרג את השירות ללקוחות.',
       },
       {
         name: 'אביאל',
         role: 'סמנכ"ל מחקר ופיתוח',
         description:
-          'בונה פתרונות מקצה לקצה שמשלבים אינטגרציות מורכבות וסוכני AI עם זיכרון מתמשך.\nמביא שילוב ייחודי של הבנה טכנית עם ראייה עסקית.',
+          'מאז ומתמיד חיפש איך מערכות עובדות ואיך לגרום להן לעבוד חכם יותר. עבר בין מכירות, שירות ופרסום והבין שתהליכים ידניים שוחקים עסקים. בנה פתרונות מאפס באמצעות למידה מתמדת ושילוב בין הבנה טכנית לראייה עסקית, וכיום מוביל את פיתוח הפתרונות ב-Methodica AI: אינטגרציות מורכבות, אוטומציה מקצה לקצה וסוכני AI עם זיכרון מתמשך.',
         quote: 'מערכת טובה היא כזו שעובדת בשבילך – ולא להפך.',
       },
       {
         name: 'יגאל',
         role: 'מומחה לפתרונות AI',
         description:
-          'מחבר בין טכנולוגיה לאסטרטגיה עסקית ומפתח פתרונות מדידים בזמן אמת.\nמיישם חשיבה יצירתית ואוטומציות מתקדמות כדי להגדיל רווחיות.',
-        quote: 'סוכן AI טוב הוא שותף לצמיחה שמאפשר להתמקד במה שבאמת חשוב.',
+          'מחבר בין טכנולוגיה לאסטרטגיה עסקית ומפתח פתרונות AI שנותנים תוצאות מדידות בזמן אמת. בעזרת יצירתיות והתמדה בונה מערכות שמבינות גם את הקוד וגם את הצורך העסקי: תהליכים קצרים יותר, פחות בזבוז זמן והגדלת רווחיות.',
+        quote:
+          'סוכן AI טוב הוא שותף לצמיחה שמאפשר להתמקד במה שבאמת חשוב וליצור יתרון בעולם שמשתנה מהר.',
       },
     ],
-    ctaTitle: 'מחפשים סוכן AI שמתאים לעסק שלכם?',
-    ctaText: 'דברו איתנו ונתכנן ביחד פתרון מדויק עם שיפור נמדד בתוצאות.',
+    ctaTitle: 'מחפשים סוכן AI מותאם אישית?',
+    ctaText: 'דברו איתנו ונתכנן ביחד פתרון שמביא תוצאות מדידות מהר.',
     ctaButton: 'קבעו ייעוץ חינם',
   },
   en: {
     heroTitle: 'About Methodica',
     heroLead:
-      'Methodica AI is a team of automation and artificial intelligence specialists focused on making advanced technology practical for every organisation. Our goal is to deliver tailor-made agents that increase revenue, save time, and elevate the customer experience.',
+      'Methodica AI is a team of AI and automation specialists focused on making intelligent technology practical for every organisation. We design tailored agents that increase revenue, save time, and elevate each customer interaction.',
     stats: [
-      { value: '300+', label: 'AI agents deployed across industries' },
-      { value: '95%', label: 'Client satisfaction with custom automation' },
-      { value: '24/7', label: 'Support, monitoring, and optimisation' },
+      { value: '300+', label: 'AI agents deployed for our clients' },
+      { value: '95%', label: 'Client satisfaction with bespoke automations' },
+      {
+        value: '24/7',
+        label: 'Always-on support, monitoring, and optimisation',
+      },
     ],
     storyTitle: 'Our Story',
     storyParagraphs: [
-      'Methodica was founded in 2025 by four entrepreneurs with deep experience in technology, product, and business growth. We witnessed how enterprise organisations leverage AI while small and midsized businesses struggle to keep pace.',
-      'We created a framework that unites advanced technology with commercial insight. Every engagement starts with discovering the real challenge and ends with a measurable improvement in results.',
+      'Methodica was founded in 2025 by four partners—Or, Aviel, Dvir, and Igal—after careers spanning technology, marketing, and business leadership.',
+      'We saw enterprises racing ahead with AI while small and midsize businesses struggled because of limited time, expertise, or budget.',
+      'We built a platform that closes that gap with tailor-made AI agents that automate workflows, manage leads, surface insights, and deliver measurable outcomes.',
     ],
-    storyHighlight: { value: '4', label: 'Founders behind Methodica AI' },
     howTitle: 'How We Deliver',
     howPoints: [
       '24/7 sales and service agents that converse, qualify, and follow up intelligently.',
-      'Tailor-made automations that streamline internal processes and reduce operating costs.',
-      'Seamless channel integrations across WhatsApp, web properties, email, and social networks.',
-      'Continuous learning that keeps every deployment ahead of customer expectations.',
+      'Custom automations that streamline internal processes, reduce costs, and free teams to grow.',
+      'Deep integrations across WhatsApp, email, web properties, and social channels so you are present everywhere.',
+      'Continuous learning that keeps every deployment improving and ahead of customer expectations.',
     ],
     missionTitle: 'Why We Are Here',
     missionParagraphs: [
-      'We believe AI should empower every ambitious business, not just corporations with deep budgets.',
-      'Our motto is simple: work smarter, not harder. When your company sells more, serves better, and saves resources, we know we have succeeded together.',
+      'We believe AI should empower every ambitious team, not just corporations with massive budgets.',
+      'Our motto is simple: work smarter, not harder. When you sell more, serve better, and save resources, we have succeeded together.',
+      'Every partnership starts by listening to the real challenge and ends with precise measurement of the impact.',
     ],
-    missionHighlight: { value: '2025', label: 'The year our journey began' },
     valuesHeaderTitle: 'Our Values',
-    valuesHeaderLead: 'Principles that shape every solution we build',
+    valuesHeaderLead: 'Principles that shape each solution we deliver',
     values: [
       {
         icon: '🎯',
         title: 'Mission Driven',
         description:
-          'We are committed to democratising AI and bringing intelligent automation to teams of every size.',
+          'We are committed to democratising AI and putting intelligent automation in every team’s hands.',
       },
       {
         icon: '💡',
         title: 'Inventive by Design',
         description:
-          'Our researchers constantly explore new technologies and methods that generate measurable value.',
+          'We constantly explore new methods and technologies that create measurable business value.',
       },
       {
         icon: '🏆',
         title: 'Quality First',
         description:
-          'Each AI agent is stress-tested, tuned, and ready to perform in demanding, real-world environments.',
+          'Every AI agent is stress-tested, tuned, and ready to perform in demanding real-world environments.',
       },
       {
         icon: '🤝',
         title: 'Client Success',
         description:
-          'Your growth is our benchmark. We operate as long-term partners invested in your outcomes.',
+          'Your growth is our north star. We act as long-term partners invested in your outcomes.',
       },
     ],
     teamHeaderTitle: 'Meet the Team',
@@ -159,37 +163,37 @@ const contentByLocale = {
         name: 'Dvir',
         role: 'CEO & Founder',
         description:
-          'Serial entrepreneur and attorney guiding organisations to success through automation. Led hundreds of projects and now helps businesses operate smarter and live better.',
+          'Serial entrepreneur and attorney who built three successful companies across marketing, software, and venture-backed startups. Leads automation strategies that help clients operate smarter and live better.',
         quote:
-          'Our success is measured by our clients’ success. When they thrive, we know we are on the right path.',
+          'Our success is measured by our clients’ success. When they thrive, we know we are on the right track.',
       },
       {
         name: 'Or',
         role: 'CFO & Growth Lead',
         description:
-          'Economist and data researcher responsible for scoping AI agents and automated journeys. Designs business models that free teams to focus on meaningful growth.',
+          'Economist and researcher with a passion for data-driven decisions. Designs bespoke AI agents and operating models that keep teams focused on meaningful growth.',
         quote:
-          'A great AI agent transforms companies—streamlining operations, focusing energy on growth, and elevating customer care.',
+          'A great AI agent transforms a company—streamlining work, focusing teams on growth, and elevating every customer interaction.',
       },
       {
         name: 'Aviel',
         role: 'VP Research & Development',
         description:
-          'Builds end-to-end solutions that combine complex integrations with long-term memory agents. Brings together deep technical insight and pragmatic business thinking.',
+          'Builder of end-to-end solutions that combine complex integrations with long-term memory agents. Blends deep technical expertise with pragmatic business insight.',
         quote: 'Technology should work for you—not the other way around.',
       },
       {
         name: 'Igal',
         role: 'AI Solutions Expert',
         description:
-          'Bridges technology and strategy to deliver measurable results in real time. Applies creative thinking and advanced automation to strengthen profitability.',
+          'Connects technology and strategy to deliver measurable AI outcomes in real time. Creates automations that reduce waste, shorten cycles, and increase profitability.',
         quote:
-          'An AI agent is a strategic partner that lets you stay focused on what matters most.',
+          'An AI agent is a strategic partner that lets you focus on what truly matters.',
       },
     ],
     ctaTitle: 'Ready for a tailored AI agent?',
     ctaText:
-      'Let’s design a solution together and measure the impact on your business.',
+      'Let’s design the right solution together and measure the impact on your business.',
     ctaButton: 'Book a free consultation',
   },
 };
@@ -200,70 +204,66 @@ export default function AboutPage({ params }) {
   const isRtl = locale === 'he';
   const contactHref = `/${locale}#contact`;
 
+  const highlightRows = [
+    {
+      id: 'story',
+      title: content.storyTitle,
+      type: 'paragraphs',
+      body: content.storyParagraphs,
+      stat: content.stats[0],
+    },
+    {
+      id: 'how',
+      title: content.howTitle,
+      type: 'list',
+      body: content.howPoints,
+      stat: content.stats[1],
+    },
+    {
+      id: 'mission',
+      title: content.missionTitle,
+      type: 'paragraphs',
+      body: content.missionParagraphs,
+      stat: content.stats[2],
+    },
+  ];
+
   return (
     <div className={`${styles.page}${isRtl ? ` ${styles.rtl}` : ''}`}>
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>{content.heroTitle}</h1>
         <p className={styles.heroLead}>{content.heroLead}</p>
-        <div className={styles.statsGrid}>
-          {content.stats.map((stat) => (
-            <div
-              key={`${stat.value}-${stat.label}`}
-              className={styles.statCard}
-            >
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </div>
-          ))}
-        </div>
       </section>
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{content.storyTitle}</h2>
-        <div className={styles.storyContent}>
-          <div className={styles.sectionLead}>
-            {content.storyParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-          <div className={styles.storyHighlight}>
-            <div className={styles.storyHighlightValue}>
-              {content.storyHighlight.value}
-            </div>
-            <div className={styles.statLabel}>
-              {content.storyHighlight.label}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{content.howTitle}</h2>
-        <ul className={styles.storyList}>
-          {content.howPoints.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>{content.missionTitle}</h2>
-        <div className={styles.storyContent}>
-          <div className={styles.sectionLead}>
-            {content.missionParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-          <div className={styles.storyHighlight}>
-            <div className={styles.storyHighlightValue}>
-              {content.missionHighlight.value}
-            </div>
-            <div className={styles.statLabel}>
-              {content.missionHighlight.label}
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className={styles.highlightStack}>
+        {highlightRows.map((row) => {
+          const stat = row.stat || { value: '—', label: '' };
+          return (
+            <section key={row.id} className={styles.dualSection}>
+              <div className={styles.dualContent}>
+                <h2 className={styles.sectionTitle}>{row.title}</h2>
+                {row.type === 'list' ? (
+                  <ul className={styles.sectionList}>
+                    {row.body.map((point, index) => (
+                      <li key={`${row.id}-item-${index}`}>{point}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className={styles.sectionLead}>
+                    {row.body.map((paragraph, index) => (
+                      <p key={`${row.id}-p-${index}`}>{paragraph}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div className={styles.highlightCard}>
+                <div className={styles.highlightValue}>{stat.value}</div>
+                <div className={styles.highlightLabel}>{stat.label}</div>
+              </div>
+            </section>
+          );
+        })}
+      </div>
 
       <section className={styles.valuesWrapper}>
         <div className={styles.valuesHeader}>
@@ -300,10 +300,13 @@ export default function AboutPage({ params }) {
                 <div className={styles.teamAvatar}>{initials}</div>
                 <h3 className={styles.teamName}>{member.name}</h3>
                 <div className={styles.teamRole}>{member.role}</div>
-                <p className={styles.teamDescription}>{member.description}</p>
-                {member.quote && (
-                  <p className={styles.teamQuote}>{member.quote}</p>
-                )}
+                <div className={styles.teamBio}>
+                  <p className={styles.teamDescription}>{member.description}</p>
+                  {member.quote && (
+                    <p className={styles.teamQuote}>{member.quote}</p>
+                  )}
+                </div>
+                <div className={styles.teamFade} aria-hidden="true" />
               </article>
             );
           })}
@@ -311,8 +314,10 @@ export default function AboutPage({ params }) {
       </section>
 
       <section className={styles.ctaSection}>
-        <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
-        <p className={styles.ctaText}>{content.ctaText}</p>
+        <div className={styles.ctaContent}>
+          <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
+          <p className={styles.ctaText}>{content.ctaText}</p>
+        </div>
         <Link href={contactHref} className={styles.ctaButton}>
           {content.ctaButton}
         </Link>

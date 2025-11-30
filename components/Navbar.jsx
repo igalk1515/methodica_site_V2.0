@@ -104,7 +104,7 @@ export default function Navbar({
         </div>
         <nav className={styles.nav} aria-label="Primary navigation">
           <div className={styles.dropdown}>
-            <button type="button" className={styles.navButton}>
+            {/* <button type="button" className={styles.navButton}>
               <span>{servicesLabel}</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,11 +133,11 @@ export default function Navbar({
                   {item.label}
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
-          <Link href={blogHref} className={styles.navLink}>
+          {/* <Link href={blogHref} className={styles.navLink}>
             {blogLabel}
-          </Link>
+          </Link> */}
           <Link href={aboutHref} className={styles.navLink}>
             {aboutLabel}
           </Link>
