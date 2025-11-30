@@ -7,6 +7,10 @@
   --brand-purple5: #842990;
   --text-black: #000000;
   --bg-light: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #1f2937;
+  --text-muted: #374151;
+  --surface-elevated: #ffffff;
 }
 
 * {
@@ -18,8 +22,184 @@
 body {
   min-height: 100vh;
   background-color: var(--bg-light);
-  color: var(--text-black);
-  line-height: 1.6;
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+:root[data-text-scale='standard'] body {
+  font-size: 17px;
+}
+
+:root[data-text-scale='large'] body {
+  font-size: 19px;
+}
+
+:root[data-text-scale='xlarge'] body {
+  font-size: 20px;
+}
+
+:root[data-contrast='high'] {
+  color-scheme: dark;
+  --bg-light: #010409;
+  --surface-elevated: #0b1120;
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #cbd5f5;
+  --brand-purple1: #facc15;
+  --brand-purple2: #facc15;
+  --brand-purple3: #f97316;
+  --brand-purple4: #f59e0b;
+  --brand-purple5: #f97316;
+}
+
+:root[data-contrast='high'] body {
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+}
+
+:root[data-contrast='high'] header {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom-color: rgba(148, 163, 184, 0.6) !important;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.4) !important;
+}
+
+:root[data-contrast='high'] #site-footer {
+  background-color: #020617 !important;
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] #site-footer a {
+  color: #cbd5f5 !important;
+}
+
+:root[data-contrast='high'] .cookieBanner {
+  background: rgba(15, 23, 42, 0.98) !important;
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] .whatsappButton {
+  background: #16a34a;
+  color: #020817;
+  box-shadow: 0 16px 36px rgba(22, 163, 74, 0.6);
+}
+
+:root[data-contrast='high'] a {
+  color: #facc15;
+}
+
+:root[data-contrast='high'] a:hover {
+  color: #fde047;
+}
+
+:root[data-contrast='high'] [class*='navLink'],
+:root[data-contrast='high'] [class*='navButton'],
+:root[data-contrast='high'] [class*='dropdownItem'] {
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] [class*='navButton'] [class*='icon'] {
+  color: #facc15 !important;
+}
+
+:root[data-contrast='high'] [class*='dropdownMenu'] {
+  background-color: #020617 !important;
+  border-color: #facc15 !important;
+}
+
+:root[data-contrast='high'] [class*='contactButton'] {
+  background: linear-gradient(135deg, #facc15, #f97316) !important;
+  color: #111827 !important;
+  box-shadow: 0 16px 32px rgba(250, 204, 21, 0.45) !important;
+}
+
+:root[data-contrast='high'] [class*='heroButton'],
+:root[data-contrast='high'] [class*='productsCta'],
+:root[data-contrast='high'] [class*='submitButton'],
+:root[data-contrast='high'] [class*='aiCtaLink'],
+:root[data-contrast='high'] .cookieButton {
+  background: linear-gradient(135deg, #facc15, #f97316) !important;
+  color: #111827 !important;
+  border: none;
+  box-shadow: 0 18px 40px rgba(250, 204, 21, 0.4) !important;
+}
+
+:root[data-contrast='high'] .cookieButtonSecondary {
+  border-color: #facc15;
+  color: #facc15;
+}
+
+:root[data-contrast='high'] [class*='productCard'] {
+  background: #020817 !important;
+  border: 2px solid #facc15 !important;
+  box-shadow: none !important;
+}
+
+:root[data-contrast='high'] [class*='productCard']::before {
+  background: #facc15 !important;
+}
+
+:root[data-contrast='high'] [class*='productTitle'],
+:root[data-contrast='high'] [class*='productSubtitle'],
+:root[data-contrast='high'] [class*='productDescription'] {
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] [class*='productsTitle'],
+:root[data-contrast='high'] [class*='heroTitle'],
+:root[data-contrast='high'] [class*='contactHeading'] {
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] [class*='partners'] {
+  background: #020617 !important;
+  border-color: #facc15 !important;
+}
+
+:root[data-contrast='high'] [class*='aiBanner'] {
+  background: #020617 !important;
+  color: #f8fafc !important;
+  box-shadow: 0 0 0 2px #facc15 !important;
+}
+
+:root[data-contrast='high'] [class*='contactContainer'] {
+  background: #010409 !important;
+  border: 2px solid #facc15 !important;
+  box-shadow: none !important;
+}
+
+:root[data-contrast='high'] [class*='contactSidebar'] {
+  background: #000000 !important;
+  color: #f8fafc !important;
+  border-right: 2px solid #facc15 !important;
+}
+
+:root[data-contrast='high'] [class*='contactLead'],
+:root[data-contrast='high'] [class*='contactPromise'],
+:root[data-contrast='high'] [class*='contactGuarantee'] {
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] [class*='formLabel'],
+:root[data-contrast='high'] [class*='consentRow'] {
+  color: #f8fafc !important;
+}
+
+:root[data-contrast='high'] input,
+:root[data-contrast='high'] select,
+:root[data-contrast='high'] textarea {
+  background-color: #020817 !important;
+  color: #f8fafc !important;
+  border: 2px solid #facc15 !important;
+}
+
+:root[data-contrast='high'] input::placeholder,
+:root[data-contrast='high'] textarea::placeholder {
+  color: #cbd5f5 !important;
+}
+
+:root[data-contrast='high'] .selectIcon {
+  border-color: #facc15 !important;
 }
 
 body.light {
@@ -48,6 +228,39 @@ ul {
   list-style: none;
 }
 
+:focus-visible {
+  outline: 3px solid var(--brand-purple3);
+  outline-offset: 3px;
+}
+
+.skipLink {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #0f172a;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+  z-index: 2000;
+}
+
+.skipLink:focus-visible {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 .whatsappButton {
   position: fixed;
   bottom: 1.75rem;
@@ -74,6 +287,277 @@ ul {
 [dir='rtl'] .whatsappButton {
   right: auto;
   left: 1.75rem;
+}
+
+.accessibilityFab {
+  position: fixed;
+  bottom: 6.5rem;
+  right: 1.75rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--brand-purple2), var(--brand-purple3));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 36px rgba(113, 59, 126, 0.35);
+  cursor: pointer;
+  z-index: 1020;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accessibilityFab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 44px rgba(113, 59, 126, 0.45);
+}
+
+.accessibilityFab:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(113, 59, 126, 0.4), 0 18px 40px rgba(113, 59, 126, 0.35);
+}
+
+.accessibilityFabIcon {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+[dir='rtl'] .accessibilityFab {
+  right: auto;
+  left: 1.75rem;
+}
+
+.accessibilityPanel {
+  position: fixed;
+  bottom: 11rem;
+  right: 1.75rem;
+  width: min(22rem, 90vw);
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  border-radius: 1.25rem;
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.25);
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1050;
+}
+
+.accessibilityPanel.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+[dir='rtl'] .accessibilityPanel {
+  right: auto;
+  left: 1.75rem;
+}
+
+.accessibilityPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.accessibilityPanelTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.accessibilityCloseButton {
+  border: none;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.accessibilityCloseButton:hover {
+  background: rgba(99, 102, 241, 0.18);
+  transform: rotate(5deg);
+}
+
+.accessibilitySections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.accessibilitySectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.accessibilityOptionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.accessibilityOption {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 0.9rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.accessibilityOption:hover {
+  transform: translateY(-1px);
+  border-color: var(--brand-purple3);
+}
+
+.accessibilityOption[aria-pressed='true'] {
+  background: linear-gradient(135deg, var(--brand-purple2), var(--brand-purple3));
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 14px 30px rgba(113, 59, 126, 0.35);
+}
+
+.accessibilityOptionLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.accessibilityOptionDescription {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+:root[data-contrast='high'] .accessibilityOption {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.accessibilityStepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.accessibilityStepperButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid rgba(148, 163, 184, 0.6);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accessibilityStepperButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: var(--brand-purple3);
+  box-shadow: 0 10px 24px rgba(113, 59, 126, 0.25);
+}
+
+.accessibilityStepperButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+  box-shadow: none;
+}
+
+.accessibilityStepperButton:focus-visible {
+  outline: none;
+  border-color: var(--brand-purple3);
+  box-shadow: 0 0 0 3px rgba(184, 79, 157, 0.35);
+}
+
+.accessibilityStepperValue {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.accessibilityStepperLabel {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.accessibilityStepperDescription {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+:root[data-contrast='high'] .accessibilityStepperButton {
+  border-color: #facc15;
+  color: #facc15;
+}
+
+:root[data-contrast='high'] .accessibilityStepperButton:hover:not(:disabled) {
+  box-shadow: 0 0 0 2px #facc15;
+}
+
+:root[data-contrast='high'] .accessibilityStepperDescription {
+  color: #e2e8f0;
+}
+
+:root[data-contrast='high'] .accessibilityFab {
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #111827;
+  box-shadow: 0 20px 44px rgba(250, 204, 21, 0.45);
+}
+
+:root[data-contrast='high'] .accessibilityPanel {
+  background: #020817;
+  border: 2px solid #facc15;
+}
+
+:root[data-contrast='high'] .accessibilityCloseButton {
+  background: rgba(250, 204, 21, 0.12);
+  color: #f8fafc;
+}
+
+:root[data-contrast='high'] .accessibilityCloseButton:hover {
+  background: rgba(250, 204, 21, 0.18);
+}
+
+:root[data-contrast='high'] .accessibilityOption[aria-pressed='true'] {
+  box-shadow: 0 0 0 2px #facc15;
+}
+
+:root[data-contrast='high'] .accessibilityOptionLabel {
+  color: #f8fafc;
+}
+
+:root[data-contrast='high'] .accessibilityOptionDescription {
+  color: #e2e8f0;
+}
+
+:root[data-contrast='high'] .accessibilityPanel {
+  box-shadow: 0 28px 60px rgba(8, 47, 73, 0.6);
+}
+
+:root[data-contrast='high'] .accessibilityOption {
+  border-color: rgba(148, 163, 184, 0.55);
 }
 
 .cookieBanner {

@@ -57,8 +57,8 @@
   gap: 0.75rem;
   border: none;
   background: none;
-  color: #374151;
-  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: color 0.2s ease;
@@ -95,8 +95,8 @@
 .dropdownItem {
   display: block;
   padding: 0.5rem 1rem;
-  color: #4b5563;
-  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -107,8 +107,8 @@
 }
 
 .navLink {
-  color: #374151;
-  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -141,12 +141,21 @@
   border-radius: 9999px;
   background-image: linear-gradient(135deg, #0a3567 0%, #713b7e 100%);
   color: #ffffff;
-  padding: 0.55rem 1.6rem;
-  font-size: 0.9rem;
+  padding: 0.65rem 1.8rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
+}
+
+.navLink:focus-visible,
+.dropdownItem:focus-visible,
+.navButton:focus-visible,
+.contactButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(184, 79, 157, 0.35);
+  border-radius: 0.75rem;
 }
 
 .contactButton:hover {

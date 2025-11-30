@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import WhatsAppButton from '../../components/WhatsAppButton';
+import AccessibilityControls from '../../components/AccessibilityControls';
 import CookieConsent from '../../components/CookieConsent';
 import { getDictionary, locales } from '../i18n';
 
@@ -8,6 +9,7 @@ export default function LocaleLayout({ children, params }) {
   const { locale } = params;
   const dictionary = getDictionary(locale);
   const direction = locale === 'he' ? 'rtl' : 'ltr';
+  const skipLinkLabel = locale === 'he' ? 'דלג לתוכן' : 'Skip to content';
 
   const dropdownSource = Array.isArray(dictionary.navDropdown)
     ? dictionary.navDropdown
@@ -25,6 +27,9 @@ export default function LocaleLayout({ children, params }) {
 
   return (
     <div lang={locale} dir={direction}>
+      <a href="#main-content" className="skipLink">
+        {skipLinkLabel}
+      </a>
       <Navbar
         locale={locale}
         brandLabel={dictionary.title}
@@ -32,8 +37,9 @@ export default function LocaleLayout({ children, params }) {
         localesList={locales}
         dictionary={dictionary}
       />
-      <main>{children}</main>
+      <main id="main-content">{children}</main>
       <Footer dictionary={dictionary} locale={locale} />
+      <AccessibilityControls locale={locale} />
       <WhatsAppButton />
       <CookieConsent locale={locale} />
     </div>
