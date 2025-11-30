@@ -39,8 +39,8 @@ export default function LocaleLayout({ children, params }) {
       />
       <main id="main-content">{children}</main>
       <Footer dictionary={dictionary} locale={locale} />
-      <AccessibilityControls locale={locale} />
       <WhatsAppButton />
+      <AccessibilityControls locale={locale} />
       <CookieConsent locale={locale} />
     </div>
   );
