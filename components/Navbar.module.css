@@ -25,6 +25,10 @@
   gap: 1.25rem;
 }
 
+.logoImage {
+  cursor: pointer;
+}
+
 .logo img {
   height: 2.5rem;
   width: auto;

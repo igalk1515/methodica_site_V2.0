@@ -121,8 +121,8 @@
     "rights": "All Rights Reserved to Methodica AI 2025",
     "policies": [
       { "label": "Accessibility", "href": "#" },
-      { "label": "Privacy Policy", "href": "#" },
-      { "label": "Terms of Use", "href": "#" }
+      { "label": "Privacy Policy", "href": "/en/privacy" },
+      { "label": "Terms of Use", "href": "/en/privacy" }
     ]
   }
 }

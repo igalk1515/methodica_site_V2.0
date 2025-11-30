@@ -98,6 +98,8 @@ export default function Navbar({
           <img
             src="https://kdpnvubujvilzhspxsru.supabase.co/storage/v1/object/public/images/methodica_logo.png"
             alt={brandLabel || 'Methodica'}
+            onClick={() => (window.location.href = `/${locale}`)}
+            className={styles.logoImage}
           />
         </div>
         <nav className={styles.nav} aria-label="Primary navigation">
