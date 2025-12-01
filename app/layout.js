@@ -1,15 +1,18 @@
-import "./globals.css";
-import { Heebo } from "next/font/google";
+import './globals.css';
+import { Heebo } from 'next/font/google';
 
 const heebo = Heebo({
-  subsets: ["latin", "hebrew"],
-  weight: ["400", "500", "700", "900"],
-  display: "swap"
+  subsets: ['latin', 'hebrew'],
+  weight: ['400', '500', '700', '900'],
+  display: 'swap',
 });
 
 export const metadata = {
-  title: "Methodica Skeleton",
-  description: "Multilingual landing starter"
+  title: 'Methodica AI',
+  description: 'Multilingual landing starter',
+  icons: {
+    icon: 'https://kdpnvubujvilzhspxsru.supabase.co/storage/v1/object/public/images/methodica_logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
