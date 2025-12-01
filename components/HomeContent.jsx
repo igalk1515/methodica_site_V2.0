@@ -53,11 +53,13 @@ export default function HomeContent({ dictionary = {}, locale = 'he' }) {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            <span className={styles.heroTitleSegment}>{hero.titlePrefix}</span>
-            <span className={styles.heroTitleHighlight}>
-              {hero.titleHighlight}
+            <span className={styles.heroTitleSentence}>
+              {hero.titlePrefix}{' '}
+              <span className={styles.heroTitleHighlight}>
+                {hero.titleHighlight}
+              </span>
             </span>
-            <span className={styles.heroTitleSegment}>{hero.titleSuffix}</span>
+            <span className={styles.heroTitleSentence}>{hero.titleSuffix}</span>
           </h1>
           <p className={styles.heroDescription}>{hero.description}</p>
           <form action={`https://wa.me/972552110416`}>
