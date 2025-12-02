@@ -9,9 +9,20 @@ const heebo = Heebo({
 
 export const metadata = {
   title: 'Methodica AI',
-  description: 'Multilingual landing starter',
+  description: 'Methodica AI — Your AI Partner for Growth',
   icons: {
     icon: 'https://kdpnvubujvilzhspxsru.supabase.co/storage/v1/object/public/images/methodica_logo.png',
+  },
+  openGraph: {
+    title: 'Methodica AI',
+    description: 'Methodica AI — Your AI Partner for Growth',
+    url: 'https://methodica.ai',
+    siteName: 'Methodica AI',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Methodica AI',
+    description: 'Methodica AI — Your AI Partner for Growth',
   },
 };
 
